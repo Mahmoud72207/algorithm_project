@@ -1,0 +1,79 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Path Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Your Career Path</h1>
+        <form action="/" method="post">
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+
+            <label>Business and Leadership:</label>
+            <select name="business" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Design and Excel:</label>
+            <select name="design" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Engineering and Math:</label>
+            <select name="engineering" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Software and C++:</label>
+            <select name="software" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>AI and Python:</label>
+            <select name="ai" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>English Level:</label>
+            <select name="english" required>
+                <option value="0">Low</option>
+                <option value="1">Middle</option>
+                <option value="2">High</option>
+            </select>
+
+            <label>GPA:</label>
+            <select name="gpa" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <label>Project Participation Level:</label>
+            <select name="projects" required>
+                <option value="0">Low</option>
+                <option value="1">Middle</option>
+                <option value="2">High</option>
+            </select>
+
+            <button type="submit">Predict Career</button>
+        </form>
+
+        {% if career %}
+        <h2>Your Predicted Career Path: {{ career }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

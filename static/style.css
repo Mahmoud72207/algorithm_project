@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* خلفية الصفحة بتدرج ألوان هادي */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* الكارت الرئيسي */
+.container {
+    background-color: #ffffffcc; /* لون أبيض شفاف */
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease;
+}
+
+/* العنوان */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* تنسيق النموذج */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+select:hover {
+    background-color: #f1f1f1;
+}
+
+select:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* زر الإرسال */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #2b5876, #4e4376);
+}
+
+/* نتيجة التنبؤ */
+h2 {
+    margin-top: 20px;
+    text-align: center;
+    color: #2f855a;
+    font-size: 22px;
+}
+
+/* رابط الرجوع */
+a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* تأثير Fade-in على الكارت */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
